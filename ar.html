@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article Cards + Dashboard Project</title>
+  <style>
+    :root {
+      --primary-color: #3F9DA8;
+      --light-bg: #f4f4f4;
+      --card-bg: #fff;
+      --text-color: #333;
+      --radius: 10px;
+      --space: 20px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--light-bg);
+      color: var(--text-color);
+    }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .dropbutton {
+      background-color: #15acb7;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    
+    .article-section {
+      padding: 20px;
+      color: #144d54;
+    }
+
+    .article-section h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .article-grid {
+      display: flex;
+      gap: var(--space);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .article-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: var(--space);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .article-card img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+    }
+
+    .article-card h3 {
+      margin: 0.5rem 0;
+      text-align: left;
+    }
+
+    .article-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dashboard</h1>
+  </header>
+
+  <section class="dashboard-section">
+    <div class="dropdown">
+      <button class="dropbutton">Menu</button>
+      <div class="dropdown-content">
+        <a href="#">Home</a>
+        <a href="#">Settings</a>
+        <a href="#">Reports</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-section">
+    <h2>Article Cards</h2>
+    <div class="article-grid">
+      <div class="article-card">
+        <img src="c:\Users\user\Downloads\download.webp" alt="Article 1">
+        <h3>How to Start Coding</h3>
+        <p>Learn HTML and CSS in this beginner guide.</p>
+        <a href="#" class="button">Read More</a>
+      </div>
+
+      <div class="article-card">
+        <img src="c:\Users\user\Downloads\download (1).webp" alt="Article 2">
+        <h3>Design</h3>
+        <p>Understand how to use Flexbox and Grid to make layouts beautifully on all screens.</p>
+        <a href="#" class="button">Read More</a>
+      </div>
+
+      <div class="article-card">
+        <img src="c:\Users\user\Downloads\download (2).webp" alt="Article 3">
+        <h3>CSS Explained</h3>
+        <p>Learn how to use CSS easily.</p>
+        <a href="#" class="button">Read More</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
